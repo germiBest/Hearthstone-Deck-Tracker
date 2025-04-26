@@ -36,8 +36,9 @@ namespace Hearthstone_Deck_Tracker.Plugins
 			{
 				if (entity.IsMinion && entity.Attack == 1)
 				{
+					// Print debug info to console
+					Console.WriteLine($"[HighlightOneAttackShopPlugin] 1-attack shop card detected: {entity.LocalizedName} (ID: {entity.CardId})");
 					// Easiest way: set a tag or property for highlight (if supported)
-					// Here, we set a custom tag for demonstration; real highlight may require UI changes
 					entity.Tags[HearthDb.Enums.GameTag.TAG_SCRIPT_DATA_NUM_1] = 9999; // Arbitrary value to mark
 				}
 			}
